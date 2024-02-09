@@ -40,14 +40,16 @@ body{
     width: 4vh;
     border: none;
 }
+
+
+
 .content{
-    margin: auto;
     display: grid;
     grid-template-columns: [carousel-left-space]0.5fr [carousel-content-start] 4fr [carousel-button-start] 1fr [carousel-right-space] 0.5fr;
-    grid-template-rows: [first-content] 35vw [second-content] 35vw;
+    grid-template-rows: [carousel-row-content-start] 35vw [carousel-row-content-end] 5vw [trending-games-start];
 }
 .content-part1{
-    margin: 20px 0px 20px 20px;
+    margin: 20px ;
     grid-column: carousel-content-start/carousel-button-start;
 }
 .carousel-item img{
@@ -74,26 +76,46 @@ body{
     background-color: transparent;
 }
 
-@media (max-width:576px){
-    
-    .content-part1{
-        grid-column: carousel-content-start/carousel-right-space;
-    }
+.trending-games-content{
+    justify-self: center;
+    align-self: self-end;
+    margin-left: 5vw;
+    grid-row: carousel-row-content-end/trending-games-start;
+    grid-column: carousel-button-start/carousel-right-space;
 }
-@media (max-width:767px){
-    .content-part2{
-        display: none;
-    }
+.trending-games-content button{
+    display: grid;
+    outline: 1px solid white;
+    color: white;
+    background-color: transparent;  
+}
+.trending-games-content button:hover{
+    outline: 1px solid rgb(159, 153, 153);
+    color: white;
+    background-color: transparent;  
+}
+
+
+@media (max-width:1023px){
     .content{
-        grid-template-columns: [carousel-left-space]0.5fr [carousel-content-start] 4fr [carousel-right-space] 0.5fr;
-        grid-template-rows: [first-content] 150vw [second-content] 45vw ;
+        display: grid;
+        grid-template-columns:[carousel-content-start]83fr [carousel-button-start]17fr ;
+        grid-template-rows: [carousel-row-content-start] 45vw [carousel-row-content-end] 5vw [trending-games-start];
     }
     .content-part1{
-        margin-top: 10vh;
-        padding-top: 10%;
-        grid-column: carousel-content-start/carousel-right-space;
+        height: auto;
+    }
+    .content-part2{
+        height: auto;
+    }
+    .trending-games-content{
+        margin: 0px;
+        justify-self: center;
+        align-self: end;
     }
 }
+
+
 
 @media (max-width:992px){
     #navbarCollapseId{
@@ -104,7 +126,7 @@ body{
         background-color: #18181c;
         padding: 0px 10vw;
     }
-    .button{
+    li .button{
         
         outline: none;
         /* background-color: red; */
@@ -118,23 +140,49 @@ body{
         border-radius: 10px;
         text-align: left;
     }
-    .btn{
+    li .btn{
         display: block;
         margin: auto;
         margin-top: 50vh;
+        margin-bottom: 10vh;
         width: 50vw;
     }
 }
-@media (max-width:1023px){
+@media (max-width:767px){
+    .content-part2{
+        display: none;
+    }
     .content{
-        display: grid;
-        grid-template-columns:[carousel-content-start]83fr [carousel-button-start]17fr ;
-        grid-template-rows: [first-content] 45vw [second-content] 45vw ;
+        grid-template-columns: [carousel-left-space]0.2fr [carousel-content-start] 4fr [carousel-right-space] 0.2fr;
+        grid-template-rows: [carousel-row-content-start] 120vw [carousel-row-content-end] 10vw [trending-games-start] ;
     }
     .content-part1{
-        height: auto;
+        margin-top: 25vh;
+        grid-column: carousel-content-start/carousel-right-space;
     }
-    .content-part2{
-        height: auto;
+    .trending-games-content{
+        justify-self: end;
+        align-self: center;
+        
+        grid-row: carousel-row-content-end/trending-games-start;
+        grid-column: carousel-content-start/carousel-right-space;
+    }
+    .trending-games-content button{
+        height: 7vw;
+        width: 25vw;
+        align-content: center;
+        font-size: 1em;
+        margin-right: 2em;
+        
+    }
+}
+@media (max-width:576px){
+    .content{
+        grid-template-rows: [navbar-end] 10vw [carousel-row-content-start] 100vw [carousel-row-content-end] 10vw [trending-games-start];
+    }
+    .content-part1{
+        margin-top: 20px;
+        grid-row: carousel-row-content-start/carousel-row-content-end;
+        grid-column: carousel-content-start/carousel-right-space;
     }
 }
