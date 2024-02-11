@@ -41,26 +41,28 @@ body{
     border: none;
 }
 
-
-
 .content{
+    grid-template-rows: [carousel-row-content-start] 35vw [carousel-row-content-end] 5vw [trending-games-start];
+    grid-template-columns: [carousel-left-space]0.5fr [carousel-content-start] 4fr [carousel-button-start] 1fr [carousel-right-space] 0.5fr;
+}
+
+.content1{
     display: grid;
     grid-template-columns: [carousel-left-space]0.5fr [carousel-content-start] 4fr [carousel-button-start] 1fr [carousel-right-space] 0.5fr;
-    grid-template-rows: [carousel-row-content-start] 35vw [carousel-row-content-end] 5vw [trending-games-start];
+    grid-template-rows: [carousel-row-content-start] 35vw [carousel-row-content-end];
 }
-.content-part1{
+.content1-part1{
     margin: 20px ;
     grid-column: carousel-content-start/carousel-button-start;
 }
 .carousel-item img{
     height: 100%; 
     width:100%; 
-    max-height:642px; 
     border-radius:15px;
     display: block;
 }
 
-.content-part2{
+.content1-part2{
     margin: 20px 0px;
     display: grid;
     grid-template-columns: 17vw;
@@ -69,7 +71,7 @@ body{
     
 }
 
-.content-part2 button{
+.content1-part2 button{
     display: grid;
     border-radius: 10px;
     margin: 0vw 1vw;
@@ -77,16 +79,19 @@ body{
 }
 
 .trending-games-content{
-    justify-self: center;
-    align-self: self-end;
-    margin-left: 5vw;
+    display: grid;
     grid-row: carousel-row-content-end/trending-games-start;
-    grid-column: carousel-button-start/carousel-right-space;
+    grid-column: main-content-start/main-content-end;
+    grid-template-rows: 2vw[r1] 4vw [r2]3vw[r3] 27vw[r4] 2vw [r5];
+    grid-template-columns: [c1] 0.5fr [c2]4fr [c3] 0.2fr [c4]0.6fr [c5]0.2fr [c6]0.5fr;
 }
 .trending-games-content button{
     display: grid;
+    grid-column: c4/c5;
+    grid-row: r1/r2;
     outline: 1px solid white;
     color: white;
+    font-size: 1.5vw;
     background-color: transparent;  
 }
 .trending-games-content button:hover{
@@ -95,23 +100,71 @@ body{
     background-color: transparent;  
 }
 
+.trending-item {
+    
+    display: grid;
+    grid-row: r3/r4;
+    grid-column: c2/c6;
+    grid-template-columns: [cc1] 1fr [cc2] 1fr [cc3] 1fr [cc4] 1fr [cc5]  ;
+    grid-template-rows: [rr1] 20vw[rr2] 1.5vw [rr3] 4vw [rr4] 1.5vw [rr5];
+}
+.trending-item img{
+    display: grid;
+    grid-row:rr1/rr2;
+    object-fit: cover;
+    height: 20vw;
+    width: 20vw;
+    border-radius: 1em;
+    justify-self: center;
+}
+.trending-item button{
+    display: grid;
+    width: 6vw;
+    grid-row: rr3/rr4;
+    
+    margin-left: 1vw;
+}
+#p1{
+    display: grid;
+    text-decoration: line-through;
+    margin-right:9vw; 
+    color:grey;
+    font-size: 15;
+}
+p{
+    display: grid;
+    color: white;
+    font-size: 15;
+    grid-row: rr3/rr4;
+    text-align: right;
+    margin: 0.7vw 3vw ;
+    
+}
+
 
 @media (max-width:1023px){
-    .content{
+    .content1{
         display: grid;
         grid-template-columns:[carousel-content-start]83fr [carousel-button-start]17fr ;
-        grid-template-rows: [carousel-row-content-start] 45vw [carousel-row-content-end] 5vw [trending-games-start];
+        grid-template-rows: [carousel-row-content-start] 45vw [carousel-row-content-end] ;
     }
-    .content-part1{
+    .content1-part1{
         height: auto;
     }
-    .content-part2{
+    .content1-part2{
         height: auto;
     }
     .trending-games-content{
         margin: 0px;
-        justify-self: center;
         align-self: end;
+        grid-template-columns: [c1]4fr [c2] 0.2fr [c3]0.6fr [c4]0.1fr ;
+    }
+    .trending-games-content button{
+        grid-column: c3/c4;
+        margin-left: 3vw;
+    }
+    .trending-item {
+        grid-column: c1/c4;
     }
 }
 
@@ -149,40 +202,117 @@ body{
     }
 }
 @media (max-width:767px){
-    .content-part2{
+    .content1-part2{
         display: none;
     }
-    .content{
+    .content1{
         grid-template-columns: [carousel-left-space]0.2fr [carousel-content-start] 4fr [carousel-right-space] 0.2fr;
-        grid-template-rows: [carousel-row-content-start] 120vw [carousel-row-content-end] 10vw [trending-games-start] ;
+        grid-template-rows: [carousel-row-content-start] 100vw [carousel-row-content-end] ;
     }
-    .content-part1{
-        margin-top: 25vh;
+    .content1-part1{
+        
+        grid-column: carousel-content-start/carousel-right-space;
+        grid-row: carousel-row-content-start/carousel-row-content-end;
+    }
+    .trending-games-content{
+        justify-self: end;
+        align-self: center;
+        grid-template-rows: 2vw[r1] 6vw [r2] 4vw [r3] 40vw [r4];
+        grid-template-columns: [c1] 0.2fr [c2]4fr [c3]1fr [c4] 0.2fr ;
+    }
+    .trending-games-content button{
+        justify-self: center;
+        font-size: 2.5vw;
+        grid-column: c3/c4;
+    }
+    .trending-games-content button{
+        grid-column: c3/c4;
+    }
+    .trending-item {
+        grid-column: c2/c4;
+        grid-template-columns: [cc1] 1fr [cc2] 1fr [cc3];
+        grid-template-rows: [rr1] 40vw[rr2] 1.5vw [rr3] 5vw [rr4] 2vw [rr5] ;
+    }
+    .trending-item img{
+        height: 40vw;
+        width: 40vw;
+    }
+    #trending-item3{
+        display: none;
+    }
+    #trending-item4{
+        display: none;
+    }
+    .trending-item button{
+        width: 10vw;
+        justify-self: self-start;
+        margin-left: 5vw;
+    }
+    p{
+        font-size: 20;
+        align-self: center;
+        margin-right: 7vw;
+    }
+    #p1{
+        font-size: 20;
+        align-self: center;
+        margin-right: 20vw;
+    }
+    
+    
+}
+@media (max-width:576px){
+    .content1{
+        grid-template-rows:  [carousel-row-content-start] 100vw [carousel-row-content-end] ;
+    }
+    .content1-part1{
+        margin-top: 20px;
+        grid-row: carousel-row-content-start/carousel-row-content-end;
         grid-column: carousel-content-start/carousel-right-space;
     }
     .trending-games-content{
         justify-self: end;
         align-self: center;
+        grid-template-rows: 2vw[r1] 10vw [r2]5vw[r3] 40vw [r4];
+        grid-template-columns: [c1] 0.2fr [c2]4fr [c3]1.5fr [c4] 0.2fr ;
         
-        grid-row: carousel-row-content-end/trending-games-start;
-        grid-column: carousel-content-start/carousel-right-space;
     }
     .trending-games-content button{
-        height: 7vw;
-        width: 25vw;
-        align-content: center;
-        font-size: 1em;
-        margin-right: 2em;
-        
+        align-self: center;
+        justify-self: center;
+        font-size: 3vw;
+        grid-column: c3/c4;
     }
-}
-@media (max-width:576px){
-    .content{
-        grid-template-rows: [navbar-end] 10vw [carousel-row-content-start] 100vw [carousel-row-content-end] 10vw [trending-games-start];
+    .trending-item {
+        grid-column: c2/c4;
+        grid-row: r3/r4;
+        grid-template-columns: [cc1] 1fr [cc2] 1fr [cc3];
+        grid-template-rows: [rr1] 40vw[rr2] 5vw [rr3] 10vw [rr4] 2vw [rr5] ;
     }
-    .content-part1{
-        margin-top: 20px;
-        grid-row: carousel-row-content-start/carousel-row-content-end;
-        grid-column: carousel-content-start/carousel-right-space;
+    .trending-item img{
+        height: 40vw;
+        width: 40vw;
+    }
+    #trending-item3{
+        display: none;
+    }
+    #trending-item4{
+        display: none;
+    }
+    .trending-item button{
+        width: 14vw;
+        justify-self: self-start;
+        margin-left: 5vw;
+        grid-row: rr3/rr4;
+    }
+    p{
+        font-size: 12;
+        align-self: center;
+        margin-right: 3vw;
+    }
+    #p1{
+        font-size: 12;
+        align-self: center;
+        margin-right: 15vw;
     }
 }
