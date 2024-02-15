@@ -14,21 +14,21 @@
         <div class="carousel-section">
             <div  class="carousel-inner-section"> 
                 <div id="carousel-target-id" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                    <div class="carousel-inner" style="cursor: pointer;">
+                        <div class="carousel-item active" onclick="openImagePage('Posters/Game1.jpg' ,'Destiny 2')">
                             <img src="images/game1.jpg" >
                         </div>
                         <div class="carousel-item ">
-                            <img src="images/game2.jpg"  >
+                            <img src="images/game2.jpg" onclick="openImagePage('images/game2.jpg' ,'The Ultimate Spider-Man')" >
                         </div>
                         <div class="carousel-item ">
-                            <img src="images/game3.jpg" >
+                            <img src="images/game3.jpg" onclick="openImagePage('Posters/FC24.jpg','FC 24')" >
                         </div>
                         <div class="carousel-item ">
-                            <img src="images/game4.jpg" >
+                            <img src="images/game4.jpg" onclick="openImagePage('Posters/Palworld.jpg','PalWorld')" >
                         </div>
                         <div class="carousel-item ">
-                            <img src="images/game5.jpg" >
+                            <img src="images/game5.jpg" onclick="openImagePage('images/game5.jpg','Fall Guys')" >
                         </div>
                     </div>
                 </div>
@@ -43,114 +43,114 @@
         </div>
         <div class=" row games-collection">
             <div class="collection-title"><h4>Trending Games</h4><button class="section-button btn btn-primary">see more</button></div>
-            <div class="collection-game" id="game1" onclick="openImagePage('images/fortnite.jpg')">
+            <div class="collection-game" id="game1" onclick="openImagePage('Posters/fortnite.jpg','Fortnite')">
                 <img src="images/fortnite.jpg">
                 <p class="game-type">Base Game</p>
                 <strong>Fortnite</strong>
                 
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game2" onclick="openImagePage('images/RE.jpg')">
+            <div class="collection-game" id="game2" onclick="openImagePage('Posters/RE.jpg','Resident Evil 4')">
                 <img src="images/RE.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>Resident-Evil 4</strong>
                 
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game3" onclick="openImagePage('images/FC24.jpg')">
+            <div class="collection-game" id="game3" onclick="openImagePage('Posters/FC24.jpg','FC 24')">
                 <img src="images/FC24.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>FC 24</strong>
                 
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
             
-            <div class="collection-game" id="game4" onclick="openImagePage('images/ER.jpg')">
+            <div class="collection-game" id="game4" onclick="openImagePage('Posters/ER.jpg','Elden Ring')">
                 <img src="images/ER.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>Elden Ring</strong>
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game5" onclick="openImagePage('images/LOU.jpg')">
+            <div class="collection-game" id="game5" onclick="openImagePage('Posters/LOU.jpg','Last of Us')">
                 <img src="images/LOU.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>the Last of Us</strong>
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
             
         </div>
         <div class=" row games-collection">
             <div class="collection-title"><h4>Recently Updated</h4><button class="section-button btn btn-primary">see more</button></div>
-            <div class="collection-game" id="game1">
-                <img src="images/HITMAN.jpg">
+            <div class="collection-game" id="game1" onclick="openImagePage('Posters/HITMAN.jpg','HitMan')">
+                <img src="images/HITMAN.jpg" >
                 <p class="game-type">Base Game</p>
                 <strong>Hitman</strong>
                 
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game2">
-                <img src="images/csgo.jpg">
+            <div class="collection-game" id="game2" onclick="openImagePage('Posters/CSGO.jpg','Counter Strike Go')">
+                <img src="images/csgo.jpg" >
                 <p class="game-type">BASE GAME</p>
                 <strong>Counter Strike-GO</strong>
                 
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game3">
+            <div class="collection-game" id="game3" onclick="openImagePage('Posters/Apex.jpg','Apex Legends')">
                 <img src="images/apex.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>Apex Legends</strong>
                 
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
             
-            <div class="collection-game" id="game4">
+            <div class="collection-game" id="game4" onclick="openImagePage('Posters/Division.jpg','Division 4')">
                 <img src="images/division.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>Division</strong>
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game5">
+            <div class="collection-game" id="game5" onclick="openImagePage('Posters/Palworld.jpg','PalWorld')">
                 <img src="images/game4.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>Palworld</strong>
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
             
         </div>
         <div class=" row games-collection">
             <div class="collection-title"><h4>Top Selling</h4><button class="section-button btn ">see more</button></div>
-            <div class="collection-game" id="game1">
+            <div class="collection-game" id="game1" onclick="openImagePage('Posters/Assaissin.jpg','Assaissin\'s creed : Valhella')">
                 <img src="images/Assaissin.jpg">
                 <p class="game-type">Base Game</p>
                 <strong>Assaissin's Creed</strong>
                 
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game2">
+            <div class="collection-game" id="game2" onclick="openImagePage('Posters/GTA.jpg','GTA V')">
                 <img src="images/GTA.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>GTA : San Andreas</strong>
                 
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game3">
+            <div class="collection-game" id="game3" onclick="openImagePage('Posters/UN4.jpg','Uncharted 4')">
                 <img src="images/uncharted.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>Uncharted 4</strong>
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
             
-            <div class="collection-game" id="game4">
+            <div class="collection-game" id="game4" onclick="openImagePage('Posters/RDR2.jpg' ,'Red Dead Redemption 2')">
                 <img src="images/RDR.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>Red Dead Redemption</strong>
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
-            <div class="collection-game" id="game5">
+            <div class="collection-game" id="game5" onclick="openImagePage('Posters/miles.jpg' ,'Marvel\'s Spider-Man: Miles Morales')">
                 <img src="images/spiderman.jpg">
                 <p class="game-type">BASE GAME</p>
                 <strong>Spiderman</strong>
-                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+                <p style="margin: 0px;"><button class="btn btn-primary" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
             </div>
             
         </div>

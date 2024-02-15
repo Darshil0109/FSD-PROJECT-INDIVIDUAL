@@ -11,21 +11,104 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="row game-page-content">
-            <div class="container-fluid" style="margin: 0px 2vw;">
-                <h3>This is the Game</h3>
+        <div>
+            <div class="row game-page-content">
+                <div class="container-fluid"  style="margin: 0px 2vw; height:10vw; ">
+                    <h1 id="Game_title_game_page"></h1>
+                </div>
+                <div class="col-md-8 game-page-content1" >
+                    <img class="game-poster" src="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, odio saepe, sit assumenda quia autem incidunt iste beatae error, aut consectetur labore! Repellat velit beatae eaque voluptatem iure repellendus aspernatur.</p>
+                </div>
+                <div class="col-md-4 game-page-content2">
+                    <img class="game-logo-content" src="images/Assaissin.jpg">
+                    <button class="btn btn-success">Buy Now</button>
+                    <button class="btn normal-button">Add to Cart</button>
+                    <button class="btn normal-button">Add into Wishlist</button>
+                </div>
             </div>
-            <div class="col-lg-8 game-page-content1" >
-                <img class="game-poster" src="images/game2.jpg">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, odio saepe, sit assumenda quia autem incidunt iste beatae error, aut consectetur labore! Repellat velit beatae eaque voluptatem iure repellendus aspernatur.</p>
-            </div>
-            <div class="col-lg-4 game-page-content2">
-                <img class="game-logo-content" src="images/Assaissin.jpg">
-                <button class="btn btn-success">Buy Now</button>
-                <button class="btn normal-button">Add to Cart</button>
-                <button class="btn normal-button">Add into Wishlist</button>
-            </div>
+            <hr>
         </div>
+        <div >
+            <div class=" game-requirements" >
+                <div style="display: flex; margin:1vw; justify-content: space-between;">
+                    <div style="margin:1vw;  ">
+                        <h6>Minimum Requirements</h6>
+                    </div>
+                    <div style="margin:1vw; text-align:right;">
+                        <h6>Recomanded Requirements</h6>
+                    </div>
+                </div>
+                <div style="display: flex; margin:1vw; justify-content: space-between;">
+                    <div style="margin:1vw; ">
+                        <h6>Os Version</h6>
+                        <p>Windows 7/8/10/11</p>
+                    </div>
+                    <div style="margin:1vw; text-align:right;">
+                        <h6>Os Version</h6>
+                        <p>Windows 7/8/10/11</p>
+                    </div>
+                </div>
+                <div style="display: flex; margin:1vw; justify-content: space-between;">
+                    <div style="margin:1vw;">
+                        <h6>CPU</h6>
+                        <p>Intel core i5</p>
+                    </div>
+                    <div style="margin:1vw; text-align:right;">
+                        <h6>CPU</h6>
+                        <p>Intel core i7</p>
+                    </div>
+                </div>
+                <div style="display: flex; margin:1vw; justify-content: space-between;">
+                    <div style="margin:1vw;">
+                        <h6>Memory</h6>
+                        <p>8 GB Ram</p>
+                    </div>
+                    <div style="margin:1vw; text-align:right;">
+                        <h6>Memory</h6>
+                        <p>8 GB Ram</p>
+                    </div>
+                </div>
+                <div style="display: flex; margin:1vw; justify-content: space-between;">
+                    <div style="margin:1vw;">
+                        <h6>GPU</h6>
+                        <p>Nvidia Geforce 820m</p>
+                    </div>
+                    <div style="margin:1vw; text-align:right;">
+                        <h6>GPU</h6>
+                        <p>NVIDIA GeForce GTX 1060</p>
+                    </div>
+                </div>
+                <div style="display: flex; margin:1vw; justify-content: space-between;">
+                    <div style="margin:1vw;">
+                        <h6>Storage</h6>
+                        <p>19 GB</p>
+                    </div>
+                    <div style="margin:1vw; text-align:right;">
+                        <h6>Storage</h6>
+                        <p>19 GB</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <footer>
+            <ul>
+                <strong>Resources</strong>
+                <li><a href="#">Support-A-Creator</a></li>
+                <li><a href="#">Fan art policy</a></li>
+                <li><a href="#">Online Services</a></li>
+                <li> <a href="#">Distribute on Game Store</a></li>
+                <li><a href="#">Support-A-Creator</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">UX-Research</a></li>
+                <li><a href="#">Community Rules</a></li>
+                <li><a href="#">Store Eula</a></li>
+                <li> <a href="#">Careers</a></li>
+                <li><a href="#">Company</a></li>
+            </ul>
+        </footer>
         <script>
             // Retrieve the selected image source from URL parameter
             urlParams = new URLSearchParams(window.location.search);
@@ -33,6 +116,9 @@
             
             // Set the source of the image
             document.getElementsByClassName('game-poster')[0].src = src;
+
+            caption = urlParams.get('game_title');
+            document.getElementById('Game_title_game_page').innerText = caption;
             </script>
     </body>
 </html>
