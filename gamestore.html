@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="strongconnect" href="https://fonts.googleapis.com">
+        <link rel="strongconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="gamestore.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="carousel-section">
+            <div  class="carousel-inner-section"> 
+                <div id="carousel-target-id" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/game1.jpg" >
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/game2.jpg"  >
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/game3.jpg" >
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/game4.jpg" >
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/game5.jpg" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-buttons-section">
+                <button style="background:url(images/game1.jpg); background-size:cover; background-position:center;"  data-bs-target="#carousel-target-id" data-bs-slide-to="0" class="active"></button>
+                <button style=" background:url(images/game2.jpg);background-size:cover; background-position:center;" data-bs-target="#carousel-target-id" data-bs-slide-to="1"></button>
+                <button style=" background:url(images/game3.jpg);background-size:cover; background-position:center;" data-bs-target="#carousel-target-id" data-bs-slide-to="2"></button>
+                <button style=" background:url(images/game4.jpg);background-size:cover; background-position:center;"  data-bs-target="#carousel-target-id" data-bs-slide-to="3" ></button>
+                <button style=" background:url(images/game5.jpg);background-size:cover; background-position:center;" data-bs-target="#carousel-target-id" data-bs-slide-to="4"></button>
+            </div>
+        </div>
+        <div class=" row games-collection">
+            <div class="collection-title"><h4>Trending Games</h4><button class="section-button btn btn-primary">see more</button></div>
+            <div class="collection-game" id="game1" onclick="openImagePage('images/fortnite.jpg')">
+                <img src="images/fortnite.jpg">
+                <p class="game-type">Base Game</p>
+                <strong>Fortnite</strong>
+                
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game2" onclick="openImagePage('images/RE.jpg')">
+                <img src="images/RE.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Resident-Evil 4</strong>
+                
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game3" onclick="openImagePage('images/FC24.jpg')">
+                <img src="images/FC24.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>FC 24</strong>
+                
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            
+            <div class="collection-game" id="game4" onclick="openImagePage('images/ER.jpg')">
+                <img src="images/ER.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Elden Ring</strong>
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game5" onclick="openImagePage('images/LOU.jpg')">
+                <img src="images/LOU.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>the Last of Us</strong>
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            
+        </div>
+        <div class=" row games-collection">
+            <div class="collection-title"><h4>Recently Updated</h4><button class="section-button btn btn-primary">see more</button></div>
+            <div class="collection-game" id="game1">
+                <img src="images/HITMAN.jpg">
+                <p class="game-type">Base Game</p>
+                <strong>Hitman</strong>
+                
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game2">
+                <img src="images/csgo.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Counter Strike-GO</strong>
+                
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game3">
+                <img src="images/apex.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Apex Legends</strong>
+                
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            
+            <div class="collection-game" id="game4">
+                <img src="images/division.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Division</strong>
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game5">
+                <img src="images/game4.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Palworld</strong>
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            
+        </div>
+        <div class=" row games-collection">
+            <div class="collection-title"><h4>Top Selling</h4><button class="section-button btn ">see more</button></div>
+            <div class="collection-game" id="game1">
+                <img src="images/Assaissin.jpg">
+                <p class="game-type">Base Game</p>
+                <strong>Assaissin's Creed</strong>
+                
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game2">
+                <img src="images/GTA.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>GTA : San Andreas</strong>
+                
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game3">
+                <img src="images/uncharted.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Uncharted 4</strong>
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            
+            <div class="collection-game" id="game4">
+                <img src="images/RDR.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Red Dead Redemption</strong>
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            <div class="collection-game" id="game5">
+                <img src="images/spiderman.jpg">
+                <p class="game-type">BASE GAME</p>
+                <strong>Spiderman</strong>
+                <p style="margin: 0px;"><button class="btn btn-warning" disabled>-50%</button> <s>₹719</s> ₹143.80</p>
+            </div>
+            
+        </div>
+
+
+        <footer>
+            <ul>
+                <strong>Resources</strong>
+                <li><a href="#">Support-A-Creator</a></li>
+                <li><a href="#">Fan art policy</a></li>
+                <li><a href="#">Online Services</a></li>
+                <li> <a href="#">Distribute on Game Store</a></li>
+                <li><a href="#">Support-A-Creator</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">UX-Research</a></li>
+                <li><a href="#">Community Rules</a></li>
+                <li><a href="#">Store Eula</a></li>
+                <li> <a href="#">Careers</a></li>
+                <li><a href="#">Company</a></li>
+            </ul>
+        </footer>
+
+
+
+        <script src="script2.js"></script>
+    </body>
+</html>
