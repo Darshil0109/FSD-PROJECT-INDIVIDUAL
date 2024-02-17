@@ -11,24 +11,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>
+
+        <div class="navigation-bar">
+            <div class="navigation-logo">
+                <img src="logo.png">
+                <h3>STORE</h3>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="navigation-icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul>
+                <li class="navigation-item"><a href="gamestore.html">Home</a></li>
+                <li class="navigation-item"><a href="#">Contact us</a></li>
+                <li class="navigation-item"><a href="#">Library</a></li>
+                <li class="navigation-item"><a href="#">My games</a></li>
+
+            </ul>
+        </div>
+
+
+
+
+
+
+        <div style="min-height: 510px;">
             <div class="row game-page-content">
-                <div class="container-fluid"  style="margin: 0px 2vw; height:10vw; ">
-                    <h1 id="Game_title_game_page"></h1>
+                <div class="container-fluid" >
+                    <h1 id="Game_title_game_page" style="display: flex; flex-wrap:wrap;"></h1>
                 </div>
                 <div class="col-md-8 game-page-content1" >
                     <img class="game-poster" src="">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, odio saepe, sit assumenda quia autem incidunt iste beatae error, aut consectetur labore! Repellat velit beatae eaque voluptatem iure repellendus aspernatur.</p>
                 </div>
                 <div class="col-md-4 game-page-content2">
-                    <img class="game-logo-content" src="images/Assaissin.jpg">
+                    <img class="game-logo-content" src="">
                     <button class="btn btn-success">Buy Now</button>
                     <button class="btn normal-button">Add to Cart</button>
                     <button class="btn normal-button">Add into Wishlist</button>
                 </div>
             </div>
-            <hr>
         </div>
+        <hr>
         <div >
             <div class=" game-requirements" >
                 <div style="display: flex; margin:1vw; justify-content: space-between;">
@@ -96,15 +120,15 @@
             <ul>
                 <strong>Resources</strong>
                 <li><a href="#">Support-A-Creator</a></li>
-                <li><a href="#">Fan art policy</a></li>
+                <li><a href="#">Policy</a></li>
                 <li><a href="#">Online Services</a></li>
                 <li> <a href="#">Distribute on Game Store</a></li>
-                <li><a href="#">Support-A-Creator</a></li>
+                <li><a href="#">E-Sports</a></li>
             </ul>
             <ul>
-                <li><a href="#">UX-Research</a></li>
-                <li><a href="#">Community Rules</a></li>
-                <li><a href="#">Store Eula</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Store</a></li>
                 <li> <a href="#">Careers</a></li>
                 <li><a href="#">Company</a></li>
             </ul>
@@ -119,6 +143,10 @@
 
             caption = urlParams.get('game_title');
             document.getElementById('Game_title_game_page').innerText = caption;
+
+
+            logo=urlParams.get('logo');
+            document.getElementsByClassName("game-logo-content")[0].src = logo;
             </script>
     </body>
 </html>
