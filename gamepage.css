@@ -215,10 +215,6 @@ footer a{
     .game-page-content2{
         height:22vh;
     }
-    .game-page-content1 p{
-        
-        display: none;
-    }
     
 }
 @media (max-width:450px){
