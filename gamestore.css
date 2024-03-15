@@ -130,7 +130,7 @@ a{
 }
 .games-collection{
     width: 75vw;
-    height: 70vh;
+    height: 500px;
     margin: 3vw auto 0vw auto;
 }
 .collection-title{
@@ -150,7 +150,7 @@ a{
     background-color: transparent;
     width: 15vh;
     margin-right: 0.5vw;
-    height: 5vh;
+    height: 80%;
     color: white;
     justify-content: center;
 }
@@ -335,13 +335,19 @@ footer a{
 
 
 
+@media (max-width:992px)
+{
+    .games-collection{
+        height: 400px;
+    }
+}
 
 
 @media (max-width:768px){
     .carousel-section{
         width: 100%;
         margin: auto;
-        grid-template-columns: [c1] 1fr [c2];
+        grid-template-columns: [c1] 1fr [c2] 0.02fr;
         grid-template-rows: [r1]40vw[r2];
     }
     .carousel-buttons-section{
@@ -353,7 +359,9 @@ footer a{
     .collection-game{
         width: 33%;
     }
-
+    .games-collection{
+        height: 80%;
+    }
     .offer-cards{
         flex-direction: column;
         height: 60vh;
