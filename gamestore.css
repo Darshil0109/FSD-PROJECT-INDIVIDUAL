@@ -124,13 +124,45 @@ a{
     outline: none;
     transition: 0.2s ease;
 }
+
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left , transparent 0%, black 100%);
+    top: 0;
+    left: 0;
+}
+.game-details{
+    font-family: "Protest Strike";
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    left: 2vw;
+    bottom: 15vw;
+    font-size: xx-large;
+    font-weight: 500;
+    letter-spacing: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.game-details2{
+    font-size: medium;
+    font-weight: lighter;
+    bottom: 3vw;
+    font-family: 'Calibri';
+    letter-spacing: normal;
+}
+
+
  button:hover{
     opacity: 0.9;
     transform: scale(1.1);
 }
 .games-collection{
     width: 75vw;
-    height: 500px;
+    height: 70vh;
     margin: 3vw auto 0vw auto;
 }
 .collection-title{
@@ -150,7 +182,7 @@ a{
     background-color: transparent;
     width: 15vh;
     margin-right: 0.5vw;
-    height: 80%;
+    height: 5vh;
     color: white;
     justify-content: center;
 }
@@ -316,6 +348,16 @@ footer a{
     .carousel-inner-section{
         margin-left: 3vh;
     }
+    .game-details2{
+        display: none;
+    }
+    .game-details{
+        bottom: 2vw;
+        left: 10vw;
+    }
+    .shadow {
+        background: linear-gradient(to bottom , transparent 0%, black 100%);
+    }
     .collection-game{
         width: 25%;
     }
@@ -335,19 +377,13 @@ footer a{
 
 
 
-@media (max-width:992px)
-{
-    .games-collection{
-        height: 400px;
-    }
-}
 
 
 @media (max-width:768px){
     .carousel-section{
         width: 100%;
         margin: auto;
-        grid-template-columns: [c1] 1fr [c2] 0.02fr;
+        grid-template-columns: [c1] 1fr [c2];
         grid-template-rows: [r1]40vw[r2];
     }
     .carousel-buttons-section{
@@ -359,9 +395,7 @@ footer a{
     .collection-game{
         width: 33%;
     }
-    .games-collection{
-        height: 80%;
-    }
+
     .offer-cards{
         flex-direction: column;
         height: 60vh;
