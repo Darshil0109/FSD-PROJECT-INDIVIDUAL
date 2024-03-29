@@ -29,13 +29,14 @@
                 <a href="signup-form.html" class="icons">
                     <i class="fa-solid fa-user-plus" id="signup-icon"></i>
                 </a>
+                <li id="temp123"></li>
                 <li class="navigation-item"><a href="gamestore.html">Home</a></li>
                 <li class="navigation-item"><a href="signup-form.html">Signup</a></li>
             </ul>
         </div>
 
 
-
+        <div class="temp-navbar">a</div>
 
 
 
@@ -138,17 +139,17 @@
         </footer>
         <script>
             // Retrieve the selected image source from URL parameter
-            urlParams = new URLSearchParams(window.location.search);
-            console.log(urlParams)
+            temp_url = new URLSearchParams(window.location.search);
+            console.log(temp_url)
             // Set the source of the image
-            src = decodeURIComponent(urlParams.get('src'));
+            src = temp_url.get('src');
             document.getElementsByClassName('game-poster')[0].src = src;
 
-            caption = urlParams.get('game_title');
+            caption = temp_url.get('game_title');
             document.getElementById('Game_title_game_page').innerText = caption;
 
 
-            logo=urlParams.get('logo');
+            logo=temp_url.get('logo');
             document.getElementsByClassName("game-logo-content")[0].src = logo;
         </script>
     </body>
