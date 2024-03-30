@@ -5,6 +5,13 @@ body{
 
 
 
+.temp-navbar{
+    z-index: 0;
+    visibility: hidden;
+    height: 15vh;
+    width: 100%;
+    
+}
 .navigation-logo{
     height: 8vh;
     width: 25vh;
@@ -12,9 +19,11 @@ body{
     margin-left: 2vh;
     display: flex;
     color: white;
+    z-index: 5;
     align-items: center;
 }
 .navigation-logo img{
+    z-index: 5;
     object-fit: contain;
     height: 65%;
     width: 50%;
@@ -23,8 +32,11 @@ body{
 .navigation-logo h3{
     font-family: "Protest Strike";
     margin: 0px;
+    z-index: 5;
 }
 .navigation-bar{
+    position: fixed;
+    z-index: 5;
     height: 10vh;
     width: 100%;
     background-color: #18181c;
@@ -51,6 +63,7 @@ body{
     font-weight: 500;
 }
 .navigation-icon{
+    z-index: 5;
     font-size: 30 !important;
     color: white;
     float: right;
@@ -187,7 +200,7 @@ footer a{
         background-color: #18181c;
         top: -100%;
         display: block;
-        z-index: 1;
+        z-index: 4;
         transition: 0.4s all ease-in-out;
     }
     .navigation-bar ul li{
@@ -206,8 +219,19 @@ footer a{
     }
     #check:checked ~ ul{
         background-color: #202020;
-        top: 10%;
+        top: 00%;
     }
+    #temp123{
+        visibility: hidden;
+    }
+    .carousel-section{
+        
+        width: 95%;
+        height: 60vh;
+        margin: auto auto auto 0px;
+        
+    }
+
     #home-icon{
         display: none;
     }

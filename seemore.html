@@ -20,6 +20,7 @@
                 <img src="logo.png">
                 <h3>STORE</h3>
             </div>
+            <!-- checkbox to check if icon is pressed or not to slide down navbar in small devices -->
             <input type="checkbox" id="check">
             <label for="check" class="navigation-icon">
                 <i class="fa-solid fa-bars"></i>
@@ -31,11 +32,14 @@
                 <a href="signup-form.html" class="icons">
                     <i class="fa-solid fa-user-plus" id="signup-icon"></i>
                 </a>
-                <li class="navigation-item"><a href="gamestore.html">Home</a></li>
+                <li id="temp123"></li>
+                <li class="navigation-item"><a href="gamestore.html" class="active" style="color: white;">Home</a></li>
                 <li class="navigation-item"><a href="signup-form.html">Signup</a></li>
             </ul>
         </div>
 
+        <!-- because of navbar's fixed position content hide besides navbar so invisible navbar so that content doesn't gets hidden-->
+        <div class="temp-navbar">a</div>
         <div class="games-collection" style="display: flex; flex-wrap:wrap;">
             <div class="collection-game" onclick="openImagePage('Posters/fortnite.jpg','Fortnite','Logos/fortnite.png')" >
                 <img src="images/fortnite.jpg">
