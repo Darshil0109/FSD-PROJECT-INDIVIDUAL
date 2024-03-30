@@ -13,11 +13,14 @@
     </head>
     <body>
         <script src="script2.js"></script>
+
+        <!-- code for navbar -->
         <div class="navigation-bar">
             <div class="navigation-logo">
                 <img src="logo.png">
                 <h3>STORE</h3>
             </div>
+            <!-- checkbox to check if icon is pressed or not to slide down navbar in small devices -->
             <input type="checkbox" id="check">
             <label for="check" class="navigation-icon">
                 <i class="fa-solid fa-bars"></i>
@@ -35,10 +38,11 @@
             </ul>
         </div>
 
+        <!-- because of navbar's fixed position content hide besides navbar so invisible navbar so that content doesn't gets hidden-->
         <div class="temp-navbar">a</div>
 
 
-
+        <!-- carousel made using bootstrap have some js to make onclick navigation to second page -->
         <div class="carousel-section">
             <div  class="carousel-inner-section"> 
                 <div id="carousel-target-id" class="carousel slide" data-bs-ride="carousel">
@@ -84,6 +88,7 @@
                 <button style=" background:url(images/game5.jpg);background-size:cover; background-position:center;" data-bs-target="#carousel-target-id" data-bs-slide-to="4"></button>
             </div>
         </div>
+        <!-- game cards for different categories -->
         <div class=" row games-collection">
             <div class="collection-title"><h4>Trending Games</h4><a href="seemore.html"><button class="section-button btn ">see more</button></a></div>
             <div class="collection-game" id="game1" onclick="openImagePage('Posters/fortnite.jpg','Fortnite','Logos/fortnite.png')">
@@ -206,6 +211,7 @@
             
         </div>
 
+        <!-- footer of webpage -->
 
         <footer>
             <ul>
